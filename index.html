@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<h1>HELLO PREETI</h1>
+
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Preeti 🎉</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe4ec, #e0f7fa);
+    color: #333;
+}
+
+
+
+
+
+
+/* ================= INTRO EFFECT ================= */
+#intro {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle at center, #220022, #000000);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.intro-text {
+    color: #fff;
+    font-size: 2.6em;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* SOFT COLOR GLOW (partial blink) */
+.glow {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.4;
+    animation: glowMove 3s infinite alternate ease-in-out;
+}
+
+.glow.pink { background: #ff4da6; top: 10%; left: 15%; }
+.glow.blue { background: #4dd2ff; bottom: 15%; right: 10%; }
+.glow.yellow { background: #ffd84d; top: 20%; right: 20%; }
+
+@keyframes glowMove {
+    from { transform: scale(0.9); opacity: 0.3; }
+    to { transform: scale(1.2); opacity: 0.5; }
+}
+
+canvas {
+    position: absolute;
+    inset: 0;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ================= MAIN WEBSITE ================= */
+
+
+
+
+
+
+
+
+
+
+
+header {
+    background: #ff4081;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav a {
+    color: white;
+    margin: 0 12px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+section {
+    padding: 30px;
+    text-align: center;
+    display: none;
+}
+
+section.active {
+    display: block;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    margin: 20px auto;
+    width: 85%;
+    max-width: 700px;
+    border-radius: 14px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+button {
+    padding: 12px 22px;
+    background: #ff4081;
+    border: none;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 8px;
+}
+
+button:hover {
+    background: #e73370;
+}
+
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 12px;
+}
+
+img {
+    width: 220px;
+    margin: 10px;
+    border-radius: 10px;
+}
+</style>
+</head>
+
+<body>
+
+
+
+
+
+
+
+<!-- ================= INTRO ================= -->
+<div id="intro">
+    <div class="glow pink"></div>
+    <div class="glow blue"></div>
+    <div class="glow yellow"></div>
+
+    <canvas id="fireworks"></canvas>
+    <h1 class="intro-text">✨ Happy Birthday Preeti ✨</h1>
+</div>
+
+
+
+
+
+
+
+
+<header>
+    <h1>🎂 Happy Birthday Preeti 🎨</h1>
+    <nav>
+        <a onclick="showSection('home')">Home</a>
+        <a onclick="showSection('gallery')">Gallery</a>
+        <a onclick="showSection('media')">Media</a>
+        <a onclick="showSection('gift')">Gift</a>
+        <a onclick="showSection('contact')">Contact</a>
+    </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="active">
+    <div class="card">
+        <h2>Dear Preeti 💖</h2>
+        <p>
+            Tumhari creativity, painting aur drawing ka passion  
+            aur padhane ka dedication tumhe sabse khaas banata hai ✨
+        </p>
+        <p>
+            May your life be as colorful as your art 🎨  
+            and as meaningful as your teaching 🌸
+        </p>
+
+        <button onclick="openInstagram()"> preeti's Instagram 📸</button>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+    <div class="card">
+        <h2>🎨 Art Gallery</h2>
+        <p>Yahan tum apni paintings & drawings add kar sakti ho</p>
+        <img src="painting1.jpeg">
+        <img src="painting5.jpeg">
+        <img src="painting4.jpeg">
+        <img src="painting3.jpeg">
+        <img src="painting2.jpeg">
+        <img src="painting6.jpeg">
+        
+    </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+    <div class="card">
+    <h2>🎶 Birthday Playlist</h2>
+
+    <p>Song 1</p>
+    <audio controls>
+        <source src="Happy Birthday Preeti 3.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>Song 2</p>
+    <audio controls>
+        <source src="Happy Birthday Preeti 1.mp3" type="audio/mpeg">
+    </audio>
+
+    <p>Song 3</p>
+    <audio controls>
+        <source src="Happy Birthday Preeti.mp3" type="audio/mpeg">
+    </audio>
+</div>
+
+    <div class="card">
+        <h2>🎥 Special Video</h2>
+        <video width="320" controls>
+            <source src="opreeti.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+<!-- GIFT -->
+<section id="gift">
+    <div class="card">
+        <h2>🎁 Choose Your Gift</h2>
+        <p>
+            Is button par click karke apna pasandida gift choose karo 💝
+        </p>
+        <button onclick="goMeesho()">Go to Meesho 🛍️</button>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="card">
+        <h2>💌 Send Gift Request</h2>
+        <form action="mailto:harinandankumar9119@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="Name" placeholder="Your Name" required><br>
+            <textarea name="Message" rows="5" placeholder="Gift request or message"></textarea><br>
+            <button type="submit">Send Request ✉️</button>
+        </form>
+    </div>
+</section>
+
+<footer>
+    Made with ❤️ specially for Preeti
+</footer>
+
+<script>
+function showSection(id) {
+    let sections = document.querySelectorAll("section");
+    sections.forEach(sec => sec.classList.remove("active"));
+    document.getElementById(id).classList.add("active");
+}
+
+function goMeesho() {
+    window.open("https://www.meesho.com", "_blank");
+}
+
+function openInstagram() {
+    window.open("https://instagram.com/justt__preeti__19", "_blank");
+}
+
+
+
+
+
+
+/* REMOVE INTRO */
+setTimeout(() => {
+    document.getElementById("intro").style.display = "none";
+}, 5500);
+
+/* ======= DENSE COLORFUL FIREWORKS ======= */
+const canvas = document.getElementById("fireworks");
+const ctx = canvas.getContext("2d");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+
+let particles = [];
+
+function createFirework() {
+    let x = Math.random() * canvas.width;
+    let y = Math.random() * canvas.height * 0.5;
+    let colors = ["#ff4da6", "#4dd2ff", "#ffd84d", "#9d4dff", "#4dff88"];
+
+    for (let i = 0; i < 120; i++) {   // DENSITY ↑
+        particles.push({
+            x, y,
+            vx: (Math.random() - 0.5) * 8,
+            vy: (Math.random() - 0.5) * 8,
+            alpha: 1,
+            color: colors[Math.floor(Math.random() * colors.length)]
+        });
+    }
+}
+
+function animate() {
+    ctx.fillStyle = "rgba(0,0,0,0.2)";
+    ctx.fillRect(0,0,canvas.width,canvas.height);
+
+    particles.forEach((p, i) => {
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.015;
+
+        ctx.fillStyle = `rgba(${hexToRgb(p.color)},${p.alpha})`;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2.5, 0, Math.PI * 2);
+        ctx.fill();
+
+        if (p.alpha <= 0) particles.splice(i,1);
+    });
+
+    requestAnimationFrame(animate);
+}
+
+function hexToRgb(hex) {
+    let c = hex.substring(1);
+    let rgb = parseInt(c, 16);
+    return [(rgb >> 16) & 255, (rgb >> 8) & 255, rgb & 255].join(",");
+}
+
+setInterval(createFirework, 500);
+animate();
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
+
